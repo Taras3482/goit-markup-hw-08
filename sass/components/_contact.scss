@@ -1,0 +1,56 @@
+.contact {
+    display: flex;
+    margin-left: auto;
+  
+  &__icon {
+    display: block;
+    fill: currentColor;
+    margin-right: 10px;
+  }  
+    
+  &__phone-number {
+    transition: color var(--animation-duration) var(--animation-timing);
+    @extend %flex;
+    @extend %contact;
+    @media screen and (max-width: 767px) {
+    font-size: 34px;
+    line-height: 1.17;
+    margin-bottom: 32px;    
+   }
+  }
+  
+  &__phone-number:hover,
+  &__phone-number:focus {
+    color: var(--accent-color);
+  }
+
+  &__mail {
+    transition: color var(--animation-duration) var(--animation-timing);
+    @extend %flex; 
+    @extend %contact;      
+    margin-right: 50px;
+    @media screen and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 1.17;      
+    }    
+  }
+  
+  &__mail:hover,
+  &__mail:focus {
+    color: var(--accent-color);
+  }   
+}
+  
+.contact__item {
+  flex-direction: column;
+  // margin-bottom: 10px;  
+  display: grid;
+    justify-content: start;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding-bottom: 10px;      
+    }
+}
+
+.contact__item:last-child {
+  margin-bottom: 0px;  
+}

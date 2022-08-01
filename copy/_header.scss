@@ -1,0 +1,97 @@
+.header {
+  border-bottom: 1px solid var(--border-colors);
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+
+&__nav {
+  // position: relative;
+  @extend %flex;    
+  }
+
+  &__desktop-menu {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      
+    }
+  }
+} 
+ 
+
+
+
+
+
+// .menu__button {
+//   display: inline-flex;
+//   margin: 0px;
+//   padding: 0px;
+//   border: none;
+//   background-color: transparent;
+// }
+
+
+// .menu__button .menu__icon-close {
+//   display: none;
+// }
+// .menu__button.is-open .menu__icon-close {
+//   display: block;
+// }
+
+// .menu__button.is-open .menu__icon-menu {
+//   display: none;
+// }
+
+// .menu__button-close {
+//   display: inline-flex;
+//   margin: 0px;
+//   padding: 0px;
+//   border: none;
+//   background-color: transparent;
+
+// }
+
+// .menu__container {
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: left;
+//     height: 100%;
+//   }
+
+//   @media screen and (max-width: 767px) {
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 100%;
+//     max-width: 480px;
+//     height: 100%;
+//     padding: 48px 40px;
+//     box-shadow: var(--shadow-menu-mobile);
+//     z-index: 0;
+//   }
+// }
+
+// .menu__container.is-open {
+//   @media screen and (max-width: 767px) {
+//     z-index: 12;
+//     display: block;
+//     @include positioning-flex(flex, start, flex-start);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     @include positioning-flex($jc: start);
+//   display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: left;
+//   }
+// }

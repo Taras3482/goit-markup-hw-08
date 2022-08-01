@@ -1,0 +1,106 @@
+.portfolio-card {
+  display: flex;
+  flex-wrap: wrap;
+
+&__link {
+    transition: box-shadow var(--animation-duration) var(--animation-timing);
+    display: block;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  &__link:hover,
+  &__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  
+  &__project {      
+    padding: 20px 24px;
+    border-left: 1px solid var(--border-colors);
+    border-right: 1px solid var(--border-colors);
+    border-bottom: 1px solid var(--border-colors);
+  }
+
+  &__tipe {    
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--primary-text-color-theme-dark);
+  }
+  
+  &__text {    
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color-theme-light);
+      
+  }
+  
+  &__item {    
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;     
+    }
+    @media screen and (min-width: 1200px) {     
+    width: calc((100% - 3 * 30px) / 3);
+    }
+  } 
+  
+  &__item:nth-child(3n) {
+    @media screen and (min-width: 1200px) {
+    margin-right: 0px;
+    }
+  }
+  &__item:last-child {
+    @media screen and (max-width: 767px) {
+    margin-bottom: 0px;
+    }
+  }
+  &__item:nth-last-child(-n + 3) {
+    @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+    }
+  }
+  
+  &__transparent {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  &__text-transparent {
+    position: absolute;
+    transition: transform var(--animation-duration) var(--animation-timing);
+    transform: translateY(100%);
+  
+    @extend %flex;    
+  
+    opacity: 0;
+    bottom: 0;
+    background: var(--transparent-bg-portfolio);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color-theme-dark);
+  }
+  
+  &__link:hover &__text-transparent {   
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+
+

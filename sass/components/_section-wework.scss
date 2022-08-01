@@ -1,0 +1,34 @@
+.wework {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  padding-top: 0;
+
+&__title {
+  margin-bottom: 50px;
+}
+
+&__item {
+  position: relative;
+  margin-right: 30px;
+}
+
+&__item:last-child {
+  margin-right: 0px;
+}
+
+&__text {
+  position: absolute;
+
+  @extend %flex;
+  @extend %primary-text;
+  bottom: 0;  
+  margin: 0px;
+  width: 100%;
+  height: 70px;
+  border-radius: 4px;
+  text-align: center; 
+  background: var(--transparent-bg-color); 
+  color: var(--secondary-text-color-theme-dark);
+}
+}
