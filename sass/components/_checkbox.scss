@@ -2,13 +2,16 @@
 &__icon {
     position: absolute;
     top: 50%;
-    left: 12px;
+    left: 0px;
     transform: translateY(-50%);
     display: inline-block;
     width: 16px;
     height: 15px;
     opacity: 1;
     transition: opacity var(--animation-duration) var(--animation-timing);
+  @media screen and (min-width: 1200px) {
+    left: 12px;    
+  }
   }
   
   &:checked ~ &__icon {
@@ -18,13 +21,16 @@
   &__icon--active {
     position: absolute;
     top: 50%;
-    left: 12px;
+    left: 0px;
     transform: translateY(-50%);
     display: inline-block;
     width: 16px;
     height: 15px;
     opacity: 0;
     transition: opacity var(--animation-duration) var(--animation-timing);
+    @media screen and (min-width: 1200px) {
+      left: 12px;    
+    }
   }
   
   &:checked ~ &__icon--active {

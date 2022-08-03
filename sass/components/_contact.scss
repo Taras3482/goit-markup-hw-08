@@ -54,3 +54,9 @@
 .contact__item:last-child {
   margin-bottom: 0px;  
 }
+
+.contact__icon {
+  @media screen and (max-width: 767px) {
+    display: none;    
+  }
+}

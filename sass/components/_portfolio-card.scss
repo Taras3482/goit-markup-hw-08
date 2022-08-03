@@ -3,8 +3,10 @@
   flex-wrap: wrap;
 
 &__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
     transition: box-shadow var(--animation-duration) var(--animation-timing);
-    display: block;
     text-decoration: none;
     position: relative;
   }
@@ -15,7 +17,8 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
   
-  &__project {      
+  &__project { 
+    flex-grow: 1;     
     padding: 20px 24px;
     border-left: 1px solid var(--border-colors);
     border-right: 1px solid var(--border-colors);
